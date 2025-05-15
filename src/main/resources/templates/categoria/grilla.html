@@ -1,0 +1,28 @@
+<th:block th:fragment="grilla(categorias)">
+
+  <!-- Si no hay resultados -->
+  <tr th:if="${#lists.isEmpty(categorias)}">
+    <td colspan="4" class="text-center fst-italic">
+      No se encontraron categorías que coincidan con la búsqueda
+    </td>
+  </tr>
+
+  <!-- Si hay resultados -->
+  <tr th:each="categoria : ${categorias}">
+    <td th:text="${categoria.idCategoria}">ID</td>
+    <td th:text="${categoria.nombre}">Nombre</td>
+    <td th:text="${categoria.descripcion}">Descripción</td>
+    <td>
+      <a th:href="@{/categoria/editar/{id}(id=${categoria.idCategoria})}"
+         class="btn btn-warning btn-sm">
+        Editar
+      </a>
+      <a th:href="@{/categoria/eliminar/{id}(id=${categoria.idCategoria})}"
+         class="btn btn-danger btn-sm"
+         onclick="return confirm('¿Está seguro de eliminar esta categoría?');">
+        Eliminar
+      </a>
+    </td>
+  </tr>
+
+</th:block>
