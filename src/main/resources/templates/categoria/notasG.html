@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación Breve de Archivos HTML en la Carpeta /categoria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Documentación Breve de Archivos HTML en la Carpeta /categoria</h1>
+
+    <h2>1. crear.html</h2>
+    <p><strong>Descripción</strong>: Este archivo permite al usuario registrar una nueva categoría.</p>
+    <p><strong>Componentes</strong>:</p>
+    <ul>
+        <li><strong>Formulario</strong>: Contiene campos para ingresar el nombre y la descripción de la categoría.</li>
+        <li><strong>Botones</strong>:
+            <ul>
+                <li><strong>Guardar</strong>: Envía los datos del formulario para crear la categoría.</li>
+                <li><strong>Cancelar</strong>: Redirige al usuario a la lista de categorías.</li>
+            </ul>
+        </li>
+        <li><strong>JavaScript</strong>: Maneja el envío del formulario de manera asíncrona utilizando <code>fetch</code> para enviar los datos a la ruta <code>/categoria/guardar</code>.</li>
+    </ul>
+
+    <h2>2. editar.html</h2>
+    <p><strong>Descripción</strong>: Este archivo permite al usuario editar una categoría existente.</p>
+    <p><strong>Componentes</strong>:</p>
+    <ul>
+        <li><strong>Formulario</strong>: Incluye campos prellenados con el nombre y la descripción de la categoría a editar, además de un campo oculto para el ID de la categoría.</li>
+        <li><strong>Botones</strong>:
+            <ul>
+                <li><strong>Guardar Cambios</strong>: Envía los datos actualizados de la categoría.</li>
+                <li><strong>Cancelar</strong>: Redirige al usuario a la lista de categorías.</li>
+            </ul>
+        </li>
+        <li><strong>JavaScript</strong>: Similar a <code>crear.html</code>, maneja el envío del formulario de manera asíncrona.</li>
+    </ul>
+
+    <h2>3. grilla.html</h2>
+    <p><strong>Descripción</strong>: Este archivo define un fragmento que se utiliza para mostrar una tabla de categorías.</p>
+    <p><strong>Componentes</strong>:</p>
+    <ul>
+        <li><strong>Condicionales</strong>: Muestra un mensaje si no hay categorías disponibles.</li>
+        <li><strong>Tabla</strong>: Lista las categorías con su ID, nombre y descripción.</li>
+        <li><strong>Acciones</strong>: Incluye botones para editar y eliminar cada categoría, con confirmación para la eliminación.</li>
+    </ul>
+
+    <h2>4. listar.html</h2>
+    <p><strong>Descripción</strong>: Este archivo muestra una lista de todas las categorías registradas.</p>
+    <p><strong>Componentes</strong>:</p>
+    <ul>
+        <li><strong>Formulario de Búsqueda</strong>: Permite al usuario buscar categorías por nombre.</li>
+        <li><strong>Tabla</strong>: Presenta las categorías utilizando el fragmento de <code>grilla.html</code>.</li>
+        <li><strong>Botón</strong>: Proporciona un enlace para crear una nueva categoría.</li>
+    </ul>
+    <p><strong>JavaScript</strong>: Maneja la búsqueda de categorías de manera asíncrona, actualizando la tabla sin recargar la página.</p>
+
+    <h2>Conclusión</h2>
+    <p>Estos archivos HTML forman parte de una interfaz de usuario para la gestión de categorías, permitiendo crear, editar, listar y eliminar categorías de manera eficiente. Cada archivo está diseñado para interactuar con el servidor a través de solicitudes asíncronas, mejorando la experiencia del usuario.</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
